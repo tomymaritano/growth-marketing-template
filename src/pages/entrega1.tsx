@@ -14,7 +14,7 @@ import {
   Table as ChakraTable,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-
+import MarketSegmentationChart from '../../components/charts/market-segment'
 // Creamos versiones “motion” de componentes Chakra:
 const MotionBox = motion(ChakraBox);
 const MotionHeading = motion(ChakraHeading);
@@ -28,7 +28,7 @@ export default function XopePage() {
   return (
     <MotionBox
       // Contenedor principal
-      maxW="container.lg"
+      maxW="800px"
       mx="auto"
       my={8}
       p={[4, 6, 8]}
@@ -91,7 +91,6 @@ export default function XopePage() {
         valor, el modelo de negocio y la estrategia de crecimiento de XOPE.io, alineado con las
         mejores prácticas de innovación y emprendimiento.
       </MotionText>
-
       <Divider mb={8} />
 
       {/* Sección 2 */}
@@ -133,7 +132,7 @@ export default function XopePage() {
         viewport={{ once: true, amount: 0.2 }}
       >
         XOPE.io se especializa en la intersección entre{" "}
-        <strong>automatización, desarrollo de producto y estrategias de crecimiento</strong>, 
+        <strong>automatización, desarrollo de producto y estrategias de crecimiento</strong>,
         brindando consultoría y soluciones digitales a startups tecnológicas, empresas de blockchain y fintechs.
       </MotionText>
 
@@ -151,7 +150,6 @@ export default function XopePage() {
       >
         2.2 Oferta de Valor
       </MotionHeading>
-
       <motion.ul
         style={{ marginBottom: "1.5rem", marginLeft: "1.5rem" }}
         initial={{ opacity: 0, y: 10 }}
@@ -252,6 +250,7 @@ export default function XopePage() {
         <li>Procesos de growth hacking no estructurados ni automatizados.</li>
       </motion.ul>
 
+
       <MotionText
         mb={6}
         lineHeight="tall"
@@ -264,7 +263,9 @@ export default function XopePage() {
         mercado validadas, optimizando costos y maximizando la eficiencia operativa.
       </MotionText>
 
-      <Divider mb={8} />
+      <MarketSegmentationChart />
+
+      <Divider mt={8} mb={8} />
 
       {/* Sección 3 */}
       <MotionHeading
