@@ -1,5 +1,5 @@
 // src/components/Sidebar.tsx
-
+import React from "react";
 import {
   Box,
   Text,
@@ -126,7 +126,7 @@ export default function Sidebar() {
                       <List spacing={1}>
                         <ListItem>
                           <Link
-                            href="introduccion"
+                            href="/entrega1"
                             display="block"
                             px={3}
                             py={2}
